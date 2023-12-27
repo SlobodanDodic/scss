@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: #f2f2dd;
+}
+
+nav {
+  background: #0e1538;
+  padding: 1.5rem 2em;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+nav .logo p {
+  font-size: 1.75em;
+  margin-left: 10px;
+}
+nav .logo img {
+  width: 50px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-self: end;
+}
+nav ul li a {
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+nav ul li a:hover {
+  color: #7079f7;
+  background: #f2f2dd;
+}
+nav .profile {
+  display: flex;
+}
+@media screen and (max-width: 650px) {
+  nav .profile {
+    display: none;
+  }
+}
+nav .profile a {
+  text-transform: uppercase;
+  color: #f2f2dd;
+  text-decoration: none;
+}
+nav .profile span {
+  color: #fb5b5b;
+  margin: 0 5px;
+}
+
+header {
+  background: url("../slike/background.jpeg");
+  background-size: cover;
+  height: 35em;
+  width: 100%;
+  padding: 10%;
+}
+header form {
+  display: flex;
+  justify-content: space-evenly;
+}
+@media screen and (max-width: 650px) {
+  header form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+header form div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5215686275);
+  padding: 10px;
+  border-radius: 5px;
+}
+header form div label {
+  color: white;
+  text-align: center;
+  margin-bottom: 5px;
+}
+header form div input {
+  display: block;
+  height: 2rem;
+  border-radius: 5px;
+  color: #0e1538;
+  border: 1px solid gray;
+  padding: 0.5em;
+}
+
+section {
+  width: 100%;
+  margin: 3rem auto;
+  text-align: center;
+}
+section h1 {
+  color: #0e1538;
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+section .destination {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+section .destination div {
+  width: 30%;
+  box-shadow: 2px 2px 5px #7079f7;
+  border-radius: 25px;
+  margin: 1em;
+  padding: 1em;
+  transition: transform 1s;
+}
+section .destination div img {
+  width: 70%;
+  height: 22em;
+  border-radius: 25px;
+  transition: transform 2s;
+}
+section .destination div img:hover {
+  transform: scale(1.3) rotate3d(0, 1, 0, 3.142rad);
+}
+section .destination div p {
+  font-size: 1.5em;
+  color: #0e1538;
+}
+
+footer {
+  background: #0e1538;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 2rem;
+}
+@media screen and (max-width: 650px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+footer div {
+  display: flex;
+}
+footer div p {
+  font-size: 0.75em;
+  vertical-align: top;
+  margin: 2rem 1rem;
+}
+footer div p span {
+  font-size: 1.3em;
+}
+
+@media screen and (max-width: 950px) {
+  nav ul {
+    width: 60%;
+  }
+  header {
+    padding: 7% 2%;
+  }
+  header form {
+    margin-left: 1%;
+    width: 98%;
+  }
+  header form div {
+    width: 22.5%;
+  }
+  header form div input {
+    width: 100%;
+  }
+  section .destination div {
+    width: 39%;
+  }
+  footer {
+    height: 33em;
+    flex-direction: column-reverse;
+  }
+  footer div,
+  footer iframe {
+    text-align: center;
+    width: 100%;
+  }
+  footer div p {
+    text-align: left;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 650px) {
+  nav {
+    height: auto;
+  }
+  nav .logo {
+    position: absolute;
+    top: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  nav ul {
+    width: 100%;
+    text-align: center;
+    margin-top: 2em;
+  }
+  nav ul li {
+    width: 100%;
+    margin: 1.5em;
+  }
+  nav .profile {
+    position: absolute;
+    right: 2em;
+    top: 1em;
+  }
+  header form div {
+    display: block;
+    padding: 0.5em;
+    width: 100%;
+  }
+  header form div input {
+    width: 100%;
+  }
+  header form div label {
+    text-align: left;
+  }
+  header form button {
+    width: 100%;
+  }
+  section .destination div {
+    width: 90%;
+  }
+  footer {
+    padding: 1em 2em;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

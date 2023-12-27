@@ -74,6 +74,13 @@ a h1 {
   background-repeat: no-repeat;
 }
 
+#gogo {
+  background-image: url("../img/GoGoTravel.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 #design {
   background-image: url("../img/DesignStudio.png");
   background-size: cover;

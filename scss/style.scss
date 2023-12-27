@@ -33,6 +33,10 @@ a {
   @include bg-image("../img/HomeExange.png");
 }
 
+#gogo {
+  @include bg-image("../img/GoGoTravel.jpeg");
+}
+
 #design {
   @include bg-image("../img/DesignStudio.png");
 }

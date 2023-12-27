@@ -9,207 +9,38 @@
   scrollbar-width: none; /* Firefox */
 }
 
-section {
-  padding: 4rem 0;
+body {
+  @include flexy-col(space-around, center);
+  width: 100vw;
+  min-height: 100vh;
+  padding: 3rem;
 }
 
-nav {
-  @include position-x-center;
-  @include flexy-row(space-between, center);
-  margin: 1rem auto;
-  width: 100%;
-  max-width: 1280px;
-  padding: 0.5rem 1rem;
-  background-color: white;
-  z-index: 100;
-  .logo {
-    font-weight: 800;
-    font-family: $logo_font;
-    font-size: 1.35rem;
-    span {
-      color: $main_red;
-    }
-  }
-  .links {
-    height: 2rem;
-    @include flexy-row(center, flex-end);
-    a {
-      @include links;
-    }
-    @include media-query(sm) {
-      display: none;
-    }
-  }
-  @include media-query(sm) {
-    &:hover .links {
-      @include flexy-col();
-      width: 100%;
-      background-color: white;
-      @include position-x-center;
-      top: 6vh;
-      height: 40vh;
-      a {
-        padding: 0.5rem 0;
-      }
-    }
-  }
+a {
+  @include links;
+  @include h1;
+}
+
+#blue {
+  @include bg-image("../img/Blueprint.png");
+}
+
+#mega {
+  @include bg-image("../img/MegaRent.png");
 }
 
 #home {
-  position: relative;
-  height: 70vh;
-  @include bg-image("../img/background.jpg");
-  @include flexy-col;
-  .heading-container {
-    p {
-      color: white;
-      text-align: center;
-      font-size: 1.15rem;
-      font-weight: 400;
-    }
-    @include h1;
-    @include media-query(sm) {
-      @include position-x-center;
-      bottom: 0;
-      background-color: black;
-      width: 100vw;
-      height: 22vh;
-      @include flexy-col;
-    }
-  }
+  @include bg-image("../img/HomeExange.png");
 }
 
-#catalog {
-  background-color: $grey_background;
-  @include h2;
-  .catalog-container {
-    @include flexy-row;
-    max-width: 1280px;
-    margin: 0 auto;
-    width: 50%;
-    @include media-query(md) {
-      @include flexy-col;
-    }
-    @include media-query(sm) {
-      @include flexy-col;
-    }
-    .car-container {
-      @include flexy-row;
-      @include media-query(sm) {
-        @include flexy-col;
-      }
-      .img-container {
-        @include flexy-col;
-        margin: 1rem;
-        img {
-          width: auto;
-          height: 135px;
-        }
-        h3 {
-          margin: 5px 0;
-        }
-        button {
-          @include btn;
-        }
-      }
-    }
-  }
+#design {
+  @include bg-image("../img/DesignStudio.png");
 }
 
-#pricing {
-  @include h2;
-  @include flexy-col;
-  button {
-    display: none;
-    @include media-query(sm) {
-      @include btn;
-    }
-  }
-  table {
-    width: 70%;
-    max-width: 600px;
-    margin: 0 auto;
-    border-spacing: 0px;
-    margin-top: 2rem;
-    @include media-query(sm) {
-      display: none;
-    }
-    thead {
-      background-color: $main_red;
-      tr {
-        td {
-          color: white;
-          padding: 10px 0;
-          text-align: center;
-        }
-      }
-    }
-    tbody {
-      tr {
-        td {
-          padding: 10px 0;
-          text-align: center;
-          border-bottom: 1px solid $main_text_color;
-          &:nth-child(1) {
-            background-color: $grey_background;
-            font-weight: 600;
-          }
-        }
-      }
-    }
-  }
-}
-
-footer {
+.container {
+  @include flexy-row(space-around, center);
   width: 100%;
-  background-color: black;
-  padding-bottom: 1rem;
-  .logo-container {
-    margin: 0 auto;
-    max-width: 1280px;
-    padding: 0.5rem 1rem;
-    @include media-query(md) {
-      text-align: center;
-    }
-    .logo {
-      font-weight: 800;
-      font-family: $logo_font;
-      font-size: 1.35rem;
-      border-bottom: 1px solid $red_dark;
-      span {
-        color: $main_red;
-      }
-    }
-  }
-  .address {
-    @include flexy-col(center, flex-start);
-    height: 100%;
-    padding-left: 2rem;
-    @include media-query(md) {
-      @include flexy-col;
-      padding-left: 0rem;
-      padding-bottom: 1rem;
-    }
-    @include media-query(sm) {
-      @include flexy-col;
-      padding-left: 0rem;
-      padding-bottom: 1rem;
-    }
-  }
-  .map-container {
-    @include flexy-row(space-between, flex-start);
-    margin: 0 auto;
-    max-width: 1280px;
-    .map {
-      width: 50%;
-      @include flexy-row;
-      height: 100%;
-    }
-    @include media-query(md) {
-      @include flexy-col;
-    }
-    @include media-query(sm) {
-      @include flexy-col;
-    }
+  @include media-query(sm) {
+    @include flexy-col;
   }
 }

@@ -1,0 +1,333 @@
+::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  max-width: 1400px;
+  height: 8vh;
+  background-color: #ffffff;
+  padding: 0 2vw;
+}
+@media screen and (max-width: 1280px) and (min-width: 541px) {
+  nav {
+    max-width: 600px;
+  }
+}
+@media (max-width: 540px) {
+  nav {
+    justify-content: center;
+  }
+}
+nav .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+nav .logo img {
+  height: 70%;
+  border-radius: 50%;
+}
+@media (max-width: 540px) {
+  nav .logo {
+    height: 90%;
+  }
+  nav .logo img {
+    height: 100%;
+    border-radius: 50%;
+  }
+}
+@media (max-width: 540px) {
+  nav:hover .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 8vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    background-color: #ffffff;
+    color: #aaa9a9;
+    z-index: 100;
+    padding-top: 1rem;
+    padding-right: 1rem;
+  }
+  nav:hover .links a {
+    text-decoration: none;
+    color: #aaa9a9;
+    padding-bottom: 1rem;
+  }
+  nav:hover ~ header {
+    margin-top: 154px;
+  }
+}
+nav .links a {
+  text-decoration: none;
+  color: #aaa9a9;
+  padding-left: 1rem;
+}
+@media (max-width: 540px) {
+  nav .links {
+    display: none;
+  }
+}
+
+header {
+  background-color: #e26868;
+  color: #555555;
+  width: 100vw;
+  min-height: 35vh;
+  margin-top: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+@media (max-width: 540px) {
+  header {
+    width: 98vw;
+  }
+}
+header h1 {
+  width: 70vw;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 9vh;
+}
+@media screen and (max-width: 1280px) and (min-width: 541px) {
+  header h1 {
+    font-size: 1.25rem;
+    padding: 0 2rem;
+  }
+}
+@media (max-width: 540px) {
+  header h1 {
+    font-size: 1.25rem;
+  }
+}
+
+article {
+  background-color: #4a3f60;
+  color: #ffffff;
+  width: 100vw;
+  min-height: 35vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  padding: 3vh 0;
+}
+@media (max-width: 540px) {
+  article {
+    width: 98vw;
+  }
+}
+article .box-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50vw;
+}
+@media (max-width: 540px) {
+  article .box-container {
+    flex-direction: column;
+  }
+}
+article .box-container .box {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+}
+@media screen and (max-width: 1280px) and (min-width: 541px) {
+  article .box-container .box {
+    flex-direction: column;
+  }
+}
+@media (max-width: 540px) {
+  article .box-container .box {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+article .box-container .box .img-halo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eeeeee;
+  border-radius: 50%;
+  width: 10vh;
+  height: 10vh;
+}
+article .box-container .box .img-halo img {
+  width: 60%;
+  height: 60%;
+}
+article .box-container .box h2 {
+  font-size: 1rem;
+  padding: 10px;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1280px) and (min-width: 541px) {
+  article .box-container .box h2 {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 540px) {
+  article .box-container .box h2 {
+    font-size: 0.65rem;
+  }
+}
+
+footer {
+  background-color: #ffffff;
+  color: #cfedf0;
+  width: 100vw;
+  min-height: 35vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 6vh 0;
+}
+@media (max-width: 540px) {
+  footer {
+    width: 98vw;
+  }
+}
+footer h1 {
+  width: 70vw;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+}
+@media screen and (max-width: 1280px) and (min-width: 541px) {
+  footer h1 {
+    font-size: 1.25rem;
+    padding: 0 2rem;
+  }
+}
+@media (max-width: 540px) {
+  footer h1 {
+    font-size: 1.25rem;
+  }
+}
+footer h3 {
+  color: #aaa9a9;
+  padding: 0.5rem 2rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+}
+@media screen and (max-width: 1280px) and (min-width: 541px) {
+  footer h3 {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 540px) {
+  footer h3 {
+    font-size: 0.85rem;
+  }
+}
+footer form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 70vw;
+  max-width: 1200px;
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: #eeeeee;
+  border-radius: 5px;
+}
+@media (max-width: 540px) {
+  footer form {
+    flex-direction: column;
+  }
+}
+footer form div input {
+  position: relative;
+  border: none;
+  border-radius: 5px;
+}
+footer form div input[placeholder] {
+  padding: 0.75rem;
+}
+footer form .sender {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer form .sender input {
+  width: 50%;
+}
+footer form .sender input::placeholder {
+  color: #cfedf0;
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+footer form .sender input:nth-child(1) {
+  margin-right: 1rem;
+}
+@media (max-width: 540px) {
+  footer form .sender input {
+    width: 100%;
+  }
+  footer form .sender input:nth-child(1) {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 540px) {
+  footer form .sender {
+    flex-direction: column;
+  }
+}
+footer form .message {
+  width: 100%;
+  padding-top: 1rem;
+}
+footer form .message input {
+  width: 100%;
+  height: 80px;
+}
+footer form .message input::placeholder {
+  color: #cfedf0;
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

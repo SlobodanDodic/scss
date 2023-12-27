@@ -1,0 +1,133 @@
+@mixin main {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $main_font;
+    color: $main_text_color;
+  }
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Media queries
+@mixin media-query($break-point) {
+  @if $break-point == sm {
+    @media (max-width: 540px) {
+      @content;
+    }
+  }
+  @if $break-point == md {
+    @media screen and (max-width: 1280px) and (min-width: 541px) {
+      @content;
+    }
+  }
+  @if $break-point == lg {
+    @media (min-width: 1281px) {
+      @content;
+    }
+  }
+}
+
+// Positions
+@mixin position-x-center($position: absolute) {
+  position: $position;
+  left: 50%;
+  transform: translateX(-50%);
+  @content;
+}
+
+@mixin position-y-center($position: absolute, $left: 0rem) {
+  position: $position;
+  left: $left;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin position-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%);
+  // transform: translateX(-50%) translateY(-50%);
+}
+
+// Flex
+@mixin flexy-row($content: center, $items: center) {
+  display: flex;
+  justify-content: $content;
+  align-items: $items;
+}
+
+@mixin flexy-col($content: center, $items: center) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $content;
+  align-items: $items;
+}
+
+// Bg Image
+@mixin bg-image($url) {
+  background-image: url($url);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+// headings
+@mixin h1 {
+  h1 {
+    font-size: $h1-font-size;
+    font-weight: 400;
+    color: $h1-color;
+    border-bottom: 1px solid $red_dark;
+    padding: 0 1rem;
+    text-align: center;
+    line-height: 1;
+    @content;
+    @include media-query(sm) {
+      font-size: $h1-font-size * 0.7;
+    }
+  }
+}
+
+@mixin h2 {
+  h2 {
+    color: $main_text_color;
+    font-size: $h1-font-size * 0.6;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+}
+
+// Link
+@mixin links {
+  text-decoration: none;
+  padding: 0 4px;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+// Button
+@mixin btn {
+  display: inline-block;
+  padding: 5px 25px;
+  border: none;
+  background-color: $main_red;
+  color: white;
+  @include media-query(sm) {
+    padding: 15px 35px;
+  }
+}

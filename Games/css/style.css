@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+  font-family: Tahoma;
+  src: url(../font/Tahoma-Font/Regular.ttf);
+}
+@font-face {
+  font-family: Tahoma;
+  src: url(../font/Tahoma-Font/Regular.ttf);
+}
+@font-face {
+  font-family: Tahoma;
+  src: url(../font/Tahoma-Font/Regular.ttf);
+}
+@font-face {
+  font-family: Tahoma;
+  src: url(../font/Tahoma-Font/Regular.ttf);
+}
+::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Tahoma, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #292929;
+  height: 19vh;
+  padding: 1rem 2rem 0rem;
+}
+header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 80%;
+  line-height: 1;
+  margin-top: 5vh;
+  padding-left: 2rem;
+}
+header div h1 {
+  color: #f99d1c;
+  font-size: 2.75rem;
+  width: 75%;
+}
+header div p {
+  color: white;
+  font-size: 0.75rem;
+  align-self: flex-end;
+}
+header img {
+  height: 100%;
+  margin-top: 4vh;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #f99d1c;
+  height: 6vh;
+  padding-left: 22rem;
+  opacity: 0.8;
+}
+nav img {
+  height: 25px;
+  border-radius: 3px;
+}
+@media (max-width: 540px) {
+  nav img {
+    position: absolute;
+    top: 2vh;
+    left: 2vh;
+    z-index: 100;
+  }
+}
+nav .links a {
+  color: #4f4f4f;
+  text-decoration: none;
+  padding: 0.75em 1.5em;
+}
+nav .links a:hover {
+  background-color: #eaf09b;
+}
+nav .links .category {
+  display: none;
+}
+nav .links .category:hover {
+  background-color: #eaf09b;
+}
+
+@media screen and (max-width: 1280px) and (min-width: 541px) {
+  nav {
+    padding-left: 16rem;
+  }
+  nav .links {
+    display: none;
+  }
+}
+@media (max-width: 540px) and (max-width: 540px) {
+  header {
+    display: none;
+  }
+}
+@media (max-width: 540px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    padding: 2rem 1rem 1rem;
+  }
+  nav .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #f99d1c;
+    margin-top: 3vh;
+  }
+  nav .links a {
+    text-align: center;
+    display: none;
+  }
+  nav .links:hover a {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+  }
+  nav .links .category {
+    display: block;
+    padding: 1rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

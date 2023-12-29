@@ -1,0 +1,49 @@
+@import "vars";
+
+// Media queries
+@mixin media-query($break-point) {
+  @if $break-point == sm {
+    @media (max-width: 540px) {
+      @content;
+    }
+  }
+  @if $break-point == md {
+    @media screen and (max-width: 1280px) and (min-width: 541px) {
+      @content;
+    }
+  }
+  @if $break-point == lg {
+    @media (min-width: 1281px) {
+      @content;
+    }
+  }
+}
+
+// Positions
+@mixin position-x-center($position: fixed, $top: 0) {
+  position: $position;
+  top: $top;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin position-y-center($position: absolute, $left: 0%) {
+  position: $position;
+  left: $left;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// Flex
+@mixin flexy($content: center, $items: center) {
+  display: flex;
+  justify-content: $content;
+  align-items: $items;
+}
+
+// Elements
+@mixin links {
+  text-decoration: none;
+  color: $linkColor;
+  padding-left: 1rem;
+}

@@ -1,0 +1,124 @@
+@import "vars";
+@import "mixin-main";
+@import "mixin-units";
+
+::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $main-font;
+}
+
+header {
+  @include flexy-row(flex-start, center);
+  background-color: $topbar-bg;
+  height: $navHeight;
+  padding: 1rem 2rem 0rem;
+  div {
+    @include flexy-row(space-between, flex-end);
+    width: 80%;
+    line-height: 1;
+    margin-top: 5vh;
+    padding-left: 2rem;
+    h1 {
+      color: $orange;
+      font-size: $h1-size;
+      width: 75%;
+    }
+    p {
+      color: white;
+      font-size: $p-size;
+      align-self: flex-end;
+    }
+  }
+  img {
+    height: 100%;
+    margin-top: 4vh;
+  }
+}
+
+nav {
+  @include flexy-row(flex-start, center);
+  background-color: $orange;
+  height: 6vh;
+  padding-left: 22rem;
+  opacity: 0.8;
+  img {
+    height: 25px;
+    border-radius: 3px;
+    @include media-query(sm) {
+      position: absolute;
+      top: 2vh;
+      left: 2vh;
+      z-index: 100;
+    }
+  }
+  .links {
+    a {
+      color: $grey;
+      text-decoration: none;
+      padding: 0.75em 1.5em;
+      &:hover {
+        background-color: $yellow;
+      }
+    }
+    .category {
+      display: none;
+      &:hover {
+        background-color: $yellow;
+      }
+    }
+  }
+}
+
+@include media-query(md) {
+  nav {
+    padding-left: 16rem;
+    .links {
+      display: none;
+    }
+  }
+}
+
+@include media-query(sm) {
+  header {
+    @include media-query(sm) {
+      display: none;
+    }
+  }
+  nav {
+    @include flexy-col(flex-start, center);
+    height: 100%;
+    padding: 2rem 1rem 1rem;
+    .links {
+      @include flexy-col;
+      width: 100%;
+      background-color: $orange;
+      margin-top: 3vh;
+      a {
+        text-align: center;
+        display: none;
+      }
+      &:hover {
+        a {
+          display: block;
+          width: 100%;
+          padding: 1rem;
+        }
+      }
+      .category {
+        display: block;
+        padding: 1rem;
+      }
+    }
+  }
+}

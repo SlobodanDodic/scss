@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="slike/logo.png" type="image/png" sizes="16x16">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <link rel="stylesheet" href="css/style.css">
 
   <title>Games</title>
@@ -13,30 +15,83 @@
 <body>
 
   <header>
-    <img src="./slike/logo.png" alt="logo">
-    <div>
-      <h1>Igrice za sve uzraste</h1>
-      <p>Broj telefona: 021 55 56 660</p>
+    <div class="container">
+      <img src="./slike/logo.png" alt="logo">
+      <div>
+        <h1>Igrice za sve uzraste</h1>
+        <p>Broj telefona: 021 55 56 660</p>
+      </div>
     </div>
   </header>
 
   <nav>
-    <img src="./slike/game-console.svg" alt="console">
-
-    <div class="links">
-      <a class="category" href="#">Kategorija</a>
-      <a href="#">Playstation</a>
-      <a href="#">Nintendo</a>
-      <a href="#">XBox</a>
-      <a href="#">PC</a>
+    <div class="container">
+      <img src="./slike/game-console.svg" alt="console">
+      <div class="links">
+        <a class="category" href="#">Kategorija</a>
+        <a href="#">Playstation</a>
+        <a href="#">Nintendo</a>
+        <a href="#">XBox</a>
+        <a href="#">PC</a>
+      </div>
     </div>
   </nav>
 
   <main>
-    <h1>Section</h1>
     <section>
-      <div class="search"></div>
-      <div class="gamelist"></div>
+      <form class="search" action="index.html" method="post">
+        <label for="">Naziv igrice</label>
+        <input type="text" name="" value="">
+        <label for="">Naziv konzole</label>
+        <input type="text" name="" value="">
+        <label for="">Uzrast</label>
+        <input type="text" name="" value="">
+        <label for="">Žanr</label>
+        <input type="text" name="" value="">
+        <label for="">Cena</label>
+        <input type="range" name="" value="">
+        <label for="">Ocena</label>
+        <input type="range" name="" value="">
+        <input type="submit" name="" value="Pretraži">
+      </form>
+
+      <div class="gamelist">
+        <div class="box">
+          <img src="slike/dark-souls.jpeg" alt="">
+          <div class="stars">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <h3>Dark Souls</h3>
+        </div>
+
+        <div class="box">
+          <img src="slike/zelda.jpeg" alt="">
+          <div class="stars">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </div>
+          <h3>Zelda: Breath of the wild</h3>
+        </div>
+
+        <div class="box">
+          <img src="slike/fifa-21.jpeg" alt="">
+          <div class="stars">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <h3>Fifa 2021</h3>
+        </div>
+      </div>
     </section>
 
     <section>

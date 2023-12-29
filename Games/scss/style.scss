@@ -19,62 +19,119 @@ body {
 }
 
 header {
-  @include flexy-row(flex-start, center);
-  background-color: $topbar-bg;
-  height: $navHeight;
-  padding: 1rem 2rem 0rem;
-  div {
-    @include flexy-row(space-between, flex-end);
-    width: 80%;
-    line-height: 1;
-    margin-top: 5vh;
-    padding-left: 2rem;
-    h1 {
-      color: $orange;
-      font-size: $h1-size;
-      width: 75%;
+  background-color: $bg-color;
+  width: 100vw;
+  .container {
+    @include flexy-row(flex-start, center);
+    padding: 1rem 2rem 0rem;
+    height: $navHeight;
+    max-width: 1400px;
+    margin: 0 auto;
+    div {
+      @include flexy-row(space-between, flex-end);
+      width: 80%;
+      line-height: 1;
+      margin-top: 5vh;
+      padding-left: 2rem;
+      h1 {
+        color: $orange;
+        font-size: $h1-size;
+        width: 75%;
+      }
+      p {
+        color: white;
+        font-size: $p-size;
+        align-self: flex-end;
+      }
     }
-    p {
-      color: white;
-      font-size: $p-size;
-      align-self: flex-end;
+    img {
+      height: 100%;
+      margin-top: 4vh;
     }
-  }
-  img {
-    height: 100%;
-    margin-top: 4vh;
   }
 }
 
 nav {
-  @include flexy-row(flex-start, center);
   background-color: $orange;
-  height: 6vh;
-  padding-left: 22rem;
-  opacity: 0.8;
-  img {
-    height: 25px;
-    border-radius: 3px;
-    @include media-query(sm) {
-      position: absolute;
-      top: 2vh;
-      left: 2vh;
-      z-index: 100;
-    }
-  }
-  .links {
-    a {
-      color: $grey;
-      text-decoration: none;
-      padding: 0.75em 1.5em;
-      &:hover {
-        background-color: $yellow;
+  width: 100vw;
+  .container {
+    @include flexy-row;
+    height: 6vh;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    img {
+      height: 25px;
+      border-radius: 3px;
+      @include media-query(sm) {
+        position: absolute;
+        top: 2vh;
+        left: 2vh;
+        z-index: 100;
       }
     }
-    .category {
-      display: none;
-      &:hover {
-        background-color: $yellow;
+    .links {
+      a {
+        color: $grey;
+        text-decoration: none;
+        padding: 0.75em 1.5em;
+        &:hover {
+          background-color: $yellow;
+        }
+      }
+      .category {
+        display: none;
+        &:hover {
+          background-color: $yellow;
+        }
+      }
+    }
+  }
+}
+
+main {
+  @include flexy-col;
+  padding: 3rem;
+  section {
+    @include flexy-row(space-between, center);
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    form {
+      @include flexy-col;
+      padding: 0 2rem;
+      margin: 1rem;
+      background-color: $bg-form-color;
+      label {
+        color: white;
+        font-size: $p-size;
+      }
+      input[type="submit"] {
+        padding: 0.5rem;
+        margin: 5px 0;
+        border-radius: 5px;
+        color: $orange;
+      }
+    }
+    .gamelist {
+      @include flexy-row(space-evenly, stretch);
+      background-color: #e6e4e4;
+      width: 80%;
+      padding: 3rem;
+      .box {
+        @include flexy-col;
+        text-align: center;
+        font-size: $p-size;
+        font-weight: bold;
+        img {
+          width: 150px;
+        }
+        .stars {
+          .checked {
+            color: $orange;
+          }
+        }
       }
     }
   }
@@ -82,7 +139,6 @@ nav {
 
 @include media-query(md) {
   nav {
-    padding-left: 16rem;
     .links {
       display: none;
     }
@@ -91,33 +147,53 @@ nav {
 
 @include media-query(sm) {
   header {
-    @include media-query(sm) {
-      display: none;
-    }
+    display: none;
   }
   nav {
     @include flexy-col(flex-start, center);
     height: 100%;
     padding: 2rem 1rem 1rem;
-    .links {
-      @include flexy-col;
-      width: 100%;
-      background-color: $orange;
-      margin-top: 3vh;
-      a {
-        text-align: center;
-        display: none;
-      }
-      &:hover {
-        a {
+    .container {
+      display: block;
+      height: auto;
+      .links {
+        @include flexy-col;
+        width: 100%;
+        background-color: $orange;
+        margin-top: 3vh;
+        .category {
           display: block;
-          width: 100%;
           padding: 1rem;
         }
+        a {
+          text-align: center;
+          display: none;
+        }
+        &:hover {
+          a {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+          }
+        }
       }
-      .category {
-        display: block;
-        padding: 1rem;
+    }
+  }
+
+  main {
+    section {
+      @include flexy-col;
+      width: 100%;
+      padding: 0;
+      form {
+        width: 100%;
+        margin: 0;
+      }
+      .gamelist {
+        @include flexy-col;
+        .box {
+          padding: 1rem 0;
+        }
       }
     }
   }

@@ -37,6 +37,10 @@ a {
   @include bg-image("../img/GoGoTravel.jpeg");
 }
 
+#games {
+  @include bg-image("../img/Games.jpeg");
+}
+
 #design {
   @include bg-image("../img/DesignStudio.png");
 }

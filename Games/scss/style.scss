@@ -91,9 +91,9 @@ nav {
 
 main {
   @include flexy-col;
-  padding: 3rem;
-  section {
-    @include flexy-row(space-between, center);
+  padding: 2rem;
+  .games {
+    @include flexy-row(space-between, stretch);
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
@@ -125,7 +125,9 @@ main {
         font-size: $p-size;
         font-weight: bold;
         img {
-          width: 150px;
+          width: 125px;
+          height: 175px;
+          margin-bottom: 10px;
         }
         .stars {
           .checked {
@@ -134,6 +136,48 @@ main {
         }
       }
     }
+  }
+
+  .contact {
+    @include flexy-row(center, stretch);
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    .info {
+      width: 50%;
+      list-style: none;
+      li {
+        display: inline-block;
+        padding: 0em 2em 0.5em 0em;
+        width: 30%;
+        font-size: $p-size;
+        a {
+          text-decoration: none;
+          color: $linkColor;
+          font-weight: bold;
+        }
+      }
+    }
+    .map {
+      text-align: end;
+      p {
+        color: $linkColor;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+footer {
+  @include flexy-row;
+  background-color: $bg-color;
+  width: 100%;
+  margin: 0 auto;
+  color: white;
+  font-size: 1.15rem;
+  img {
+    height: 20px;
+    margin-right: 10px;
   }
 }
 
@@ -181,7 +225,7 @@ main {
   }
 
   main {
-    section {
+    .games {
       @include flexy-col;
       width: 100%;
       padding: 0;
@@ -193,6 +237,35 @@ main {
         @include flexy-col;
         .box {
           padding: 1rem 0;
+        }
+      }
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 2rem 0;
+      width: 100%;
+      .info {
+        width: 100%;
+        list-style: none;
+        padding-top: 2rem;
+        li {
+          display: inline-block;
+          width: 30%;
+          font-size: $p-size;
+          padding: 0rem 0.5rem 0.5rem 0rem;
+          text-align: center;
+          a {
+            text-decoration: none;
+            color: $linkColor;
+          }
+        }
+      }
+      .map {
+        text-align: center;
+        iframe {
+          max-width: 90%;
         }
       }
     }

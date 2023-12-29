@@ -116,18 +116,18 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3rem;
+  padding: 2rem;
 }
-main section {
+main .games {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
-main section form {
+main .games form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -136,17 +136,17 @@ main section form {
   margin: 1rem;
   background-color: #4f4f4f;
 }
-main section form label {
+main .games form label {
   color: white;
   font-size: 0.75rem;
 }
-main section form input[type=submit] {
+main .games form input[type=submit] {
   padding: 0.5rem;
   margin: 5px 0;
   border-radius: 5px;
   color: #f99d1c;
 }
-main section .gamelist {
+main .games .gamelist {
   display: flex;
   justify-content: space-evenly;
   align-items: stretch;
@@ -154,7 +154,7 @@ main section .gamelist {
   width: 80%;
   padding: 3rem;
 }
-main section .gamelist .box {
+main .games .gamelist .box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -163,11 +163,58 @@ main section .gamelist .box {
   font-size: 0.75rem;
   font-weight: bold;
 }
-main section .gamelist .box img {
-  width: 150px;
+main .games .gamelist .box img {
+  width: 125px;
+  height: 175px;
+  margin-bottom: 10px;
 }
-main section .gamelist .box .stars .checked {
+main .games .gamelist .box .stars .checked {
   color: #f99d1c;
+}
+main .contact {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+main .contact .info {
+  width: 50%;
+  list-style: none;
+}
+main .contact .info li {
+  display: inline-block;
+  padding: 0em 2em 0.5em 0em;
+  width: 30%;
+  font-size: 0.75rem;
+}
+main .contact .info li a {
+  text-decoration: none;
+  color: #6e6c6c;
+  font-weight: bold;
+}
+main .contact .map {
+  text-align: end;
+}
+main .contact .map p {
+  color: #6e6c6c;
+  font-weight: bold;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #292929;
+  width: 100%;
+  margin: 0 auto;
+  color: white;
+  font-size: 1.15rem;
+}
+footer img {
+  height: 20px;
+  margin-right: 10px;
 }
 
 @media screen and (max-width: 1280px) and (min-width: 541px) {
@@ -213,7 +260,7 @@ main section .gamelist .box .stars .checked {
     width: 100%;
     padding: 1rem;
   }
-  main section {
+  main .games {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -221,18 +268,46 @@ main section .gamelist .box .stars .checked {
     width: 100%;
     padding: 0;
   }
-  main section form {
+  main .games form {
     width: 100%;
     margin: 0;
   }
-  main section .gamelist {
+  main .games .gamelist {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  main section .gamelist .box {
+  main .games .gamelist .box {
     padding: 1rem 0;
+  }
+  main .contact {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 2rem 0;
+    width: 100%;
+  }
+  main .contact .info {
+    width: 100%;
+    list-style: none;
+    padding-top: 2rem;
+  }
+  main .contact .info li {
+    display: inline-block;
+    width: 30%;
+    font-size: 0.75rem;
+    padding: 0rem 0.5rem 0.5rem 0rem;
+    text-align: center;
+  }
+  main .contact .info li a {
+    text-decoration: none;
+    color: #6e6c6c;
+  }
+  main .contact .map {
+    text-align: center;
+  }
+  main .contact .map iframe {
+    max-width: 90%;
   }
 }
 

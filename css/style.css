@@ -53,8 +53,8 @@ a h1 {
   }
 }
 
-#blue {
-  background-image: url("../img/Blueprint.png");
+#floyd {
+  background-image: url("../img/Floyd.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -90,6 +90,13 @@ a h1 {
 
 #design {
   background-image: url("../img/DesignStudio.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#blue {
+  background-image: url("../img/Blueprint.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

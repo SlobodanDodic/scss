@@ -21,8 +21,8 @@ a {
   @include h1;
 }
 
-#blue {
-  @include bg-image("../img/Blueprint.png");
+#floyd {
+  @include bg-image("../img/Floyd.jpg");
 }
 
 #mega {
@@ -43,6 +43,10 @@ a {
 
 #design {
   @include bg-image("../img/DesignStudio.png");
+}
+
+#blue {
+  @include bg-image("../img/Blueprint.png");
 }
 
 .container {

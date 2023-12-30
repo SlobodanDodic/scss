@@ -1,0 +1,19 @@
+@import "vars";
+@import "mixin-main";
+@import "mixin-units";
+
+::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $primary-ff;
+}

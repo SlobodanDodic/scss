@@ -1,0 +1,93 @@
+@import "vars";
+@import "mixin-main";
+
+@mixin section {
+  section {
+    position: relative;
+    @include flexy-col;
+    padding: 2vh;
+    height: 100vh;
+    border-bottom: 4px double;
+  }
+}
+
+@mixin h1 {
+  h1 {
+    font-size: $h1-font-size;
+    color: $h1-color;
+    text-transform: uppercase;
+    text-align: center;
+    @content;
+    @include media-query(sm) {
+      font-size: $h1-font-size * 0.7;
+    }
+  }
+}
+
+@mixin links {
+  text-decoration: none;
+  color: $link-color;
+  padding: 4px 0;
+  display: inline-block;
+  width: 90px;
+  text-align: center;
+  border-right: 1px solid $link-color;
+  border-top-left-radius: 10vw;
+  &:hover {
+    color: $default-text-color;
+    background-color: $link-color;
+    transition: background-color 0.75s ease;
+  }
+}
+
+@mixin btns($color, $bg-color) {
+  button {
+    color: $color;
+    background-color: $bg-color;
+    margin: 1rem;
+    padding: 0.75rem 2rem;
+    border-radius: 1rem;
+    border: 1px solid $btn-color;
+    width: fit-content;
+    &:hover {
+      color: $bg-color;
+      background-color: $color;
+      cursor: pointer;
+      transition: background-color 0.5s ease;
+    }
+    @content;
+  }
+}
+
+@mixin labels() {
+  label {
+    font-size: $input-font-size;
+    margin-right: 0.5rem;
+    display: inline-block;
+    width: $input-font-size * 4.5;
+    text-align: end;
+    @content;
+  }
+}
+
+@mixin inputs($color: $input-color, $bg-color: transparent, $border: none) {
+  input {
+    position: relative;
+    margin: $input-font-size * 0.3;
+    width: $input-font-size * 10;
+    border: $border;
+    border-radius: $input-font-size * 0.25;
+    outline: none;
+    background-color: $bg-color;
+    &[placeholder] {
+      padding: $input-font-size * 0.75;
+    }
+    &::placeholder {
+      @include position-y-center;
+      font-size: $input-font-size;
+      color: $color;
+      left: $input-font-size * 0.75;
+    }
+    @content;
+  }
+}

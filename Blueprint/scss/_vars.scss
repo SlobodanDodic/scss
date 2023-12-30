@@ -1,30 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
 
-// Font Families:
-$font-family: "Roboto", sans-serif;
-$footer-family: "Courgette", cursive;
-
 // Breakpoints for media queries:
 $small: 540px;
 $medium: 1280px;
 
-// Basic setup:
-$default-text-color: #282626;
-$orange-color: #f75311;
-// $orange-color: #f75311;
-$bg-color: #282626;
+// Max width:
+$max-width: 1400px;
 
-// Typography colors:
-$h1-color: $default-text-color;
-$p-color: $default-text-color;
+// Font Families:
+$primary-ff: "Roboto", sans-serif;
+$secondary-ff: "Courgette", cursive;
 
-$btn-color: $default-text-color;
-$input-color: #878484;
-$link-color: #e1dede;
+// Typography:
+$h1-fs: 3rem;
+$h2-fs: 2.5rem;
+$h3-fs: 2rem;
+$h4-fs: 1.5rem;
+$p-fs: 1rem;
+$link-fs: 1rem;
+$input-fs: 1rem;
 
-// Typography font-sizes:
-$h1-font-size: 2.5rem;
-$p-font-size: 1rem;
-$link-font-size: 1rem;
-$input-font-size: 0.9rem;
+// Colors:
+$main-color: #cdcbcb;
+$bg-color: #333;

@@ -1,9 +1,13 @@
 @import "vars";
 @import "mixin-main";
 
-@mixin max-width {
-  max-width: $max-width;
-  margin: 0 auto;
+@mixin container {
+  .container {
+    max-width: $max-width;
+    width: 100%;
+    margin: 0 auto;
+    @content;
+  }
 }
 
 @mixin section($padding) {

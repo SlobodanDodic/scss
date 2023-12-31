@@ -6,6 +6,113 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+nav {
+  background-color: #282727;
+}
+nav .container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  position: relative;
+}
+nav .container .logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+nav .container .logo img {
+  width: 5rem;
+}
+nav .container .logo h1 {
+  font-size: 2.75rem;
+  color: #cdcbcb;
+  text-align: center;
+  margin-left: 1rem;
+}
+nav .container .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav .container .links a {
+  text-decoration: none;
+  color: #cdcbcb;
+  display: inline-block;
+  text-align: center;
+  margin-left: 1rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+nav .container .links a:hover {
+  color: #282727;
+  background-color: #cdcbcb;
+  transition: background-color 0.75s ease;
+}
+nav .container .links #menu {
+  display: none;
+}
+
+@media (max-width: 540px) {
+  nav .container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 0.5rem;
+  }
+  nav .container .logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+  nav .container .logo h1 {
+    font-size: 1.925rem;
+    text-decoration: underline;
+  }
+  nav .container .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  nav .container .links #menu {
+    display: inline-block;
+    position: absolute;
+    top: 2.25rem;
+    right: 1rem;
+    color: #cdcbcb;
+    padding: 5px 10px;
+  }
+  nav .container .links a {
+    display: none;
+    text-align: center;
+  }
+  nav .container .links:hover a {
+    display: block;
+    padding: 1rem;
+    width: 100%;
+    border-bottom: 1px solid rgba(205, 203, 203, 0.1490196078);
+    margin: 5px;
+  }
+}
 ::-webkit-scrollbar {
   display: none;
   -ms-overflow-style: none; /* IE and Edge */
@@ -20,98 +127,6 @@
 
 body {
   font-family: "Philosopher", sans-serif;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 2rem;
-  background-color: #282727;
-  position: relative;
-}
-nav .logo {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-nav .logo img {
-  width: 5rem;
-}
-nav .logo h1 {
-  font-size: 2.75rem;
-  color: #cdcbcb;
-  text-align: center;
-  margin-left: 1rem;
-}
-nav .links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-nav .links a {
-  text-decoration: none;
-  color: #cdcbcb;
-  display: inline-block;
-  text-align: center;
-  margin-left: 1rem;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-nav .links a:hover {
-  color: #282727;
-  background-color: #cdcbcb;
-  transition: background-color 0.75s ease;
-}
-nav .links #menu {
-  display: none;
-}
-
-@media (max-width: 540px) {
-  nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 1rem 0.5rem;
-  }
-  nav .logo {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-  }
-  nav .logo h1 {
-    font-size: 1.925rem;
-    text-decoration: underline;
-  }
-  nav .links {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  nav .links #menu {
-    display: inline-block;
-    position: absolute;
-    top: 2.25rem;
-    right: 1rem;
-    color: #cdcbcb;
-    padding: 5px 10px;
-  }
-  nav .links a {
-    display: none;
-    text-align: center;
-  }
-  nav .links:hover a {
-    display: block;
-    padding: 1rem;
-    width: 100%;
-    border-bottom: 1px solid rgba(205, 203, 203, 0.1490196078);
-    margin: 5px;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

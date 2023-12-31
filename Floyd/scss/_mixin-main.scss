@@ -32,9 +32,8 @@
   transform: translateX(-50%);
   @content;
 }
-@mixin position-y-center($position: absolute, $left: 0rem) {
+@mixin position-y-center($position: absolute) {
   position: $position;
-  left: $left;
   top: 50%;
   transform: translateY(-50%);
 }

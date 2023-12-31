@@ -17,11 +17,8 @@
 @mixin h1 {
   h1 {
     font-size: $h1-fs;
-    color: $h1-color;
+    color: $main-color;
     text-align: center;
-    @include media-query(sm) {
-      font-size: $h1-fs * 0.7;
-    }
     @content;
   }
 }
@@ -29,12 +26,15 @@
 @mixin link {
   a {
     text-decoration: none;
-    color: $link-color;
+    color: $main-color;
     display: inline-block;
     text-align: center;
+    margin-left: 1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
     &:hover {
-      color: $default-text-color;
-      background-color: $link-color;
+      color: $bg-color;
+      background-color: $main-color;
       transition: background-color 0.75s ease;
     }
     @content;

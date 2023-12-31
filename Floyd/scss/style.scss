@@ -17,3 +17,68 @@
 body {
   font-family: $primary-ff;
 }
+
+nav {
+  @include flexy-row(space-between, center);
+  padding: 0.5rem 2rem;
+  background-color: $bg-color;
+  position: relative;
+  .logo {
+    @include flexy-row(flex-start, center);
+    img {
+      width: 5rem;
+    }
+    @include h1 {
+      margin-left: 1rem;
+    }
+  }
+
+  .links {
+    @include flexy-row;
+    @include link;
+    #menu {
+      display: none;
+    }
+  }
+}
+
+@include media-query(sm) {
+  nav {
+    @include flexy-col;
+    width: 100%;
+    padding: 1rem 0.5rem;
+    .logo {
+      @include flexy-row(flex-start, center);
+      width: 100%;
+      h1 {
+        font-size: $h1-fs * 0.7;
+        text-decoration: underline;
+      }
+    }
+    .links {
+      @include flexy-col;
+      width: 100%;
+      #menu {
+        display: inline-block;
+        position: absolute;
+        top: 2.25rem;
+        right: 1rem;
+        color: $main-color;
+        padding: 5px 10px;
+      }
+      a {
+        display: none;
+        text-align: center;
+      }
+      &:hover {
+        a {
+          display: block;
+          padding: 1rem;
+          width: 100%;
+          border-bottom: 1px solid #cdcbcb26;
+          margin: 5px;
+        }
+      }
+    }
+  }
+}

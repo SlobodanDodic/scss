@@ -1,0 +1,13 @@
+@import "vars";
+@import "mixin-main";
+@import "mixin-units";
+
+footer {
+  background-color: $bg-color;
+  color: $main-color;
+  border-top: 1px solid $main-color;
+  text-align: center;
+  @include container {
+    padding: 1rem 0;
+  }
+}

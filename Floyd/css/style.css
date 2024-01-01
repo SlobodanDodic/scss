@@ -38,6 +38,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
 nav {
   background-color: #201e1e;
 }
@@ -350,17 +366,26 @@ header h2 {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-.albums .container .sell .sell-info {
-  color: #201e1e;
-  font-size: 1rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-align: center;
-  margin: 2rem 0;
+.albums .container .chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 1rem;
+}
+.albums .container .chart .sell-info {
   padding: 1rem;
   max-width: 500px;
-  border-radius: 5px;
-  box-shadow: 0px -2px 10px rgba(205, 203, 203, 0.6117647059);
+  border-left: 3px double #201e1e;
+  font-weight: bold;
+}
+.albums .container .chart .sell-info p {
+  color: #201e1e;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.albums .container .chart .sell-info a {
+  color: #201e1e;
 }
 
 @media (max-width: 540px) {
@@ -385,6 +410,67 @@ header h2 {
     margin: 5%;
   }
 }
+.contact {
+  background-color: #201e1e;
+  color: #cdcbcb;
+}
+.contact .container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+.contact .container .map-box {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.contact .container .map-box .address {
+  margin-right: 1rem;
+  text-align: end;
+  padding: 5px;
+}
+.contact .container .map-box .map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact .container .map-box .map iframe {
+  width: 80vw;
+  height: 70vw;
+  max-width: 400px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+@media (max-width: 540px) {
+  .contact .container .map-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact .container .map-box .address {
+    width: 100%;
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+footer {
+  background-color: #201e1e;
+  color: #cdcbcb;
+  border-top: 1px solid #cdcbcb;
+  text-align: center;
+}
+footer .container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
 ::-webkit-scrollbar {
   display: none;
   -ms-overflow-style: none; /* IE and Edge */

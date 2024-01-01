@@ -1,0 +1,97 @@
+@import "vars";
+@import "mixin-main";
+@import "mixin-units";
+
+.albums {
+  @include container {
+    margin: 2rem auto;
+    @include h1 {
+      color: $bg-color;
+    }
+    .studio {
+      @include flexy-row(center, flex-start);
+      padding: 1rem;
+      ol {
+        list-style-type: upper-roman;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 275px;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 650px;
+        li {
+          padding: 5px;
+        }
+      }
+    }
+    .sell {
+      @include flexy-row;
+      flex-wrap: wrap;
+      margin: 2rem 0;
+      .box {
+        position: relative;
+        box-shadow: 0px 0px 9px $bg-color;
+        border-radius: 10px;
+        height: 350px;
+        width: 90%;
+        max-width: 350px;
+        margin: 2rem;
+        img {
+          width: 100%;
+          height: 350px;
+          border-radius: 10px;
+        }
+        h4 {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          font-size: $h4-fs;
+          text-shadow: 1px 0px 1px white;
+          font-family: $secondary-ff;
+        }
+        h5 {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: $h5-fs;
+          text-shadow: 1px 0px 1px white;
+        }
+        p {
+          @include position-x-center;
+          bottom: 0;
+          width: 100%;
+          text-align: center;
+          font-size: $p-fs;
+          color: $main-color;
+          padding: 7px;
+          background-color: #201e1ec2;
+          box-shadow: 0px -2px 10px $shadow-color;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+        }
+      }
+    }
+  }
+}
+
+@include media-query(sm) {
+  .albums {
+    .container {
+      .studio {
+        @include flexy-col;
+        ol {
+          align-items: flex-start;
+          padding-left: 2rem;
+        }
+      }
+      .sell {
+        @include flexy-col;
+        .box {
+          margin: 5%;
+        }
+      }
+    }
+  }
+}

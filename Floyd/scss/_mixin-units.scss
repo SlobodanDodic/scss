@@ -21,8 +21,12 @@
 @mixin h1 {
   h1 {
     font-size: $h1-fs;
+    font-family: $secondary-ff;
     color: $main-color;
     text-align: center;
+    @include media-query(sm) {
+      font-size: $h1-fs * 0.7;
+    }
     @content;
   }
 }

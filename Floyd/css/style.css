@@ -14,8 +14,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
 nav {
-  background-color: #282727;
+  background-color: #201e1e;
 }
 nav .container {
   max-width: 1400px;
@@ -37,9 +61,15 @@ nav .container .logo img {
 }
 nav .container .logo h1 {
   font-size: 2.75rem;
+  font-family: "Caveat", cursive;
   color: #cdcbcb;
   text-align: center;
   margin-left: 1rem;
+}
+@media (max-width: 540px) {
+  nav .container .logo h1 {
+    font-size: 1.925rem;
+  }
 }
 nav .container .links {
   display: flex;
@@ -56,7 +86,7 @@ nav .container .links a {
   border-radius: 5px;
 }
 nav .container .links a:hover {
-  color: #282727;
+  color: #201e1e;
   background-color: #cdcbcb;
   transition: background-color 0.75s ease;
 }
@@ -83,7 +113,6 @@ nav .container .links #menu {
     width: 100%;
   }
   nav .container .logo h1 {
-    font-size: 1.925rem;
     text-decoration: underline;
   }
   nav .container .links {
@@ -111,6 +140,236 @@ nav .container .links #menu {
     width: 100%;
     border-bottom: 1px solid rgba(205, 203, 203, 0.1490196078);
     margin: 5px;
+  }
+}
+header {
+  position: relative;
+  width: 100vw;
+  height: 70vh;
+  background-image: url("../img/cover.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+header h2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.15rem;
+  color: #201e1e;
+  font-family: "Caveat", cursive;
+  top: 10%;
+  width: 80%;
+  max-width: 450px;
+  padding: 1rem;
+  border-radius: 10px;
+  font-weight: 400;
+  box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.168627451);
+  text-align: center;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.168627451);
+}
+@media (max-width: 540px) {
+  header h2 {
+    font-size: 1.72rem;
+  }
+}
+
+.info {
+  background-color: #201e1e;
+}
+.info .container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 4rem;
+}
+.info .container p {
+  color: #cdcbcb;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.info .container h1 {
+  font-size: 2.75rem;
+  font-family: "Caveat", cursive;
+  color: #cdcbcb;
+  text-align: center;
+}
+@media (max-width: 540px) {
+  .info .container h1 {
+    font-size: 1.925rem;
+  }
+}
+.info .container .members {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.info .container .members .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.75rem;
+  padding: 0.5rem;
+  box-shadow: 0px 0px 9px rgba(205, 203, 203, 0.6117647059);
+}
+.info .container .members .box img {
+  width: 200px;
+  height: 200px;
+  box-shadow: 0px 0px 9px rgba(205, 203, 203, 0.6117647059);
+  border-radius: 5px;
+}
+.info .container .members .box img:hover {
+  transform: scale(1.1);
+  transition: transform 0.75s ease;
+  cursor: pointer;
+}
+.info .container .members .box p {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.info .container .members .box small {
+  color: #cdcbcb;
+  letter-spacing: 1px;
+}
+.info .container .members .box a {
+  background-color: #cdcbcb;
+  padding: 0.25rem 4rem;
+  margin: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #201e1e;
+}
+.info .container .members .box a:hover {
+  background-color: #480000;
+  color: #cdcbcb;
+  transition: background-color 0.75s ease;
+}
+
+@media (max-width: 540px) {
+  .info .container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .info .container p {
+    font-size: 0.8rem;
+    text-align: end;
+  }
+}
+.albums .container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  margin: 2rem auto;
+}
+.albums .container h1 {
+  font-size: 2.75rem;
+  font-family: "Caveat", cursive;
+  color: #cdcbcb;
+  text-align: center;
+  color: #201e1e;
+}
+@media (max-width: 540px) {
+  .albums .container h1 {
+    font-size: 1.925rem;
+  }
+}
+.albums .container .studio {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+}
+.albums .container .studio ol {
+  list-style-type: upper-roman;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 275px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 650px;
+}
+.albums .container .studio ol li {
+  padding: 5px;
+}
+.albums .container .sell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+.albums .container .sell .box {
+  position: relative;
+  box-shadow: 0px 0px 9px #201e1e;
+  border-radius: 10px;
+  height: 350px;
+  width: 90%;
+  max-width: 350px;
+  margin: 2rem;
+}
+.albums .container .sell .box img {
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+}
+.albums .container .sell .box h4 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.5rem;
+  text-shadow: 1px 0px 1px white;
+  font-family: "Caveat", cursive;
+}
+.albums .container .sell .box h5 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.25rem;
+  text-shadow: 1px 0px 1px white;
+}
+.albums .container .sell .box p {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  color: #cdcbcb;
+  padding: 7px;
+  background-color: rgba(32, 30, 30, 0.7607843137);
+  box-shadow: 0px -2px 10px rgba(205, 203, 203, 0.6117647059);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+@media (max-width: 540px) {
+  .albums .container .studio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .albums .container .studio ol {
+    align-items: flex-start;
+    padding-left: 2rem;
+  }
+  .albums .container .sell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .albums .container .sell .box {
+    margin: 5%;
   }
 }
 ::-webkit-scrollbar {

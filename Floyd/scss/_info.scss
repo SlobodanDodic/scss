@@ -1,0 +1,72 @@
+@import "vars";
+@import "mixin-main";
+@import "mixin-units";
+
+.info {
+  background-color: $bg-color;
+  @include container {
+    padding: 4rem;
+    p {
+      color: $main-color;
+      font-size: $p-fs;
+      letter-spacing: 1px;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    @include h1;
+    .members {
+      @include flexy-row;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      .box {
+        @include flexy-col(flex-start, center);
+        margin: 0.75rem;
+        padding: 0.5rem;
+        box-shadow: 0px 0px 9px $shadow-color;
+        img {
+          width: 200px;
+          height: 200px;
+          box-shadow: 0px 0px 9px $shadow-color;
+          border-radius: 5px;
+          &:hover {
+            transform: scale(1.1);
+            transition: transform 0.75s ease;
+            cursor: pointer;
+          }
+        }
+        p {
+          margin-top: 1rem;
+          margin-bottom: 0.5rem;
+        }
+        small {
+          color: $main-color;
+          letter-spacing: 1px;
+        }
+        a {
+          background-color: $main-color;
+          padding: 0.25rem 4rem;
+          margin: 10px;
+          border-radius: 10px;
+          text-decoration: none;
+          color: $bg-color;
+          &:hover {
+            background-color: $red-color;
+            color: $main-color;
+            transition: background-color 0.75s ease;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-query(sm) {
+  .info {
+    @include container {
+      p {
+        font-size: $p-fs * 0.8;
+        text-align: end;
+      }
+    }
+  }
+}

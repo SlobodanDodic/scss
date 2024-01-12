@@ -74,8 +74,8 @@ a h1 {
   background-repeat: no-repeat;
 }
 
-#gogo {
-  background-image: url("../img/GoGoTravel.jpeg");
+#trains {
+  background-image: url("../img/Trains.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -95,11 +95,25 @@ a h1 {
   background-repeat: no-repeat;
 }
 
-#blue {
+#gogo {
+  background-image: url("../img/GoGoTravel.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.blue-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 4px double #333;
+}
+.blue-box #blue {
   background-image: url("../img/Blueprint.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  display: inline-block;
 }
 
 .container {

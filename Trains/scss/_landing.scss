@@ -1,0 +1,79 @@
+@import "vars";
+@import "mixin-main";
+@import "mixin-units";
+
+.landing {
+  position: relative;
+  width: 100vw;
+  height: 60vh;
+  @include bg-image("../images/VozPozadina.webp");
+  .box {
+    @include position-y-center;
+    background-color: white;
+    display: flex;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-left: 10%;
+    .img-box {
+      position: relative;
+      img {
+        width: 300px;
+        border-radius: 1rem;
+        margin: 1rem 1.25rem;
+      }
+      p {
+        @include position-x-center;
+        bottom: 2vh;
+        color: white;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        width: 100%;
+        margin-left: 1.5rem;
+        font-weight: 500;
+      }
+      &:hover {
+        animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      }
+    }
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@include media-query(sm) {
+  .landing {
+    height: 70vh;
+    .box {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      background-color: white;
+      display: flex;
+      border-radius: 1rem;
+      flex-direction: column;
+      width: 59%;
+      margin-left: 0;
+      .img-box {
+        width: 84%;
+        img {
+          width: 100%;
+          border-radius: 1rem;
+          margin: 1rem;
+          max-width: 300px;
+        }
+        p {
+          bottom: 3vh;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

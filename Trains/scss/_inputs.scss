@@ -1,0 +1,79 @@
+@import "vars";
+@import "mixin-main";
+@import "mixin-units";
+
+.inputs {
+  @include flexy-col;
+  @include h1 {
+    padding: 2rem;
+  }
+  .container {
+    @include flexy-row;
+    flex-wrap: wrap;
+    width: 45rem;
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid $bg-color;
+    select,
+    input,
+    button {
+      width: 12rem;
+      height: 2rem;
+      border-radius: 5px;
+      margin: 0.5rem 1rem;
+      padding-left: 5px;
+      border: 1px solid $bg-color;
+      &::placeholder {
+        @include position-y-center;
+        left: $input-fs * 0.5;
+        color: $bg-color;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    button {
+      background-color: $bg-color;
+      color: $main-color;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@include media-query(sm) {
+  .inputs {
+    .container {
+      @include flexy-row;
+      flex-wrap: wrap;
+      width: 90%;
+      // display: grid;
+      // grid-template-columns: repeat(1, 1fr);
+      select,
+      input,
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include media-query(md) {
+  .inputs {
+    .container {
+      @include flexy-row;
+      flex-wrap: wrap;
+      width: 45rem;
+      // display: grid;
+      // grid-template-columns: repeat(2, 1fr);
+      select,
+      input,
+      button {
+        width: 19rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@import "vars";
+@import "mixin-main";
+@import "mixin-units";
+
+.info {
+  @include flexy-row;
+  padding: 3rem;
+  height: 600px;
+  .left {
+    width: 30%;
+    height: 100%;
+    margin: 1rem;
+    @include flexy-col(space-between, flex-start);
+    border-right: 1px solid $blue-bg;
+    p {
+      padding: 0.5rem 0;
+    }
+    .blue {
+      color: $mail-text;
+    }
+  }
+  .right {
+    width: 70%;
+    margin: 1rem;
+    height: 100%;
+    @include flexy-col(space-between, flex-start);
+    h3 {
+      padding: 0rem 1.5rem;
+    }
+    h4 {
+      padding: 1.5rem;
+      border-radius: 1rem;
+      background-color: $grey-bg;
+      margin: 0.25rem 0;
+      width: 100%;
+      &:hover {
+        color: $red-text;
+      }
+    }
+  }
+}
+
+@include media-query(md) {
+  .info {
+    padding: 3rem;
+    @include flexy-col;
+    flex-direction: column-reverse;
+    height: auto;
+    .left {
+      width: 100%;
+      border-right: none;
+      margin: 1rem;
+      padding-left: 1rem;
+    }
+    .right {
+      border-bottom: 1px solid $blue-bg;
+      width: 100%;
+      margin: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+@include media-query(sm) {
+  .info {
+    padding: 1rem;
+    @include flexy-col;
+    flex-direction: column-reverse;
+    height: auto;
+    .left {
+      width: 100%;
+      border-right: none;
+      margin: 1rem;
+      padding-left: 1rem;
+      p {
+        font-size: 0.75rem;
+      }
+    }
+    .right {
+      border-bottom: 1px solid $blue-bg;
+      width: 100%;
+      margin: 1rem;
+      padding-bottom: 1rem;
+      h4 {
+        font-size: 0.75rem;
+      }
+    }
+  }
+}

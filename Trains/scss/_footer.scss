@@ -1,0 +1,47 @@
+@import "vars";
+@import "mixin-main";
+@import "mixin-units";
+
+footer {
+  @include flexy-row(space-around, center);
+  background-color: $blue-bg;
+  color: white;
+  padding: 1rem;
+  div {
+    @include flexy-row;
+    h4 {
+      margin: 0 1rem;
+      font-weight: 400;
+    }
+  }
+  h4 {
+    font-weight: 400;
+  }
+}
+
+@include media-query(md) {
+  footer {
+    @include flexy-col;
+    h4 {
+      margin-top: 1rem;
+    }
+  }
+}
+
+@include media-query(sm) {
+  footer {
+    @include flexy-col;
+    div {
+      @include flexy-row;
+      .left,
+      .right {
+        @include flexy-col;
+        font-size: 0.75rem;
+      }
+    }
+    h4 {
+      margin-top: 1rem;
+      font-size: 0.75rem;
+    }
+  }
+}

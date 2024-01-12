@@ -33,8 +33,8 @@ a {
   @include bg-image("../img/HomeExange.png");
 }
 
-#gogo {
-  @include bg-image("../img/GoGoTravel.jpeg");
+#trains {
+  @include bg-image("../img/Trains.webp");
 }
 
 #games {
@@ -45,8 +45,17 @@ a {
   @include bg-image("../img/DesignStudio.png");
 }
 
-#blue {
-  @include bg-image("../img/Blueprint.png");
+#gogo {
+  @include bg-image("../img/GoGoTravel.jpeg");
+}
+
+.blue-box {
+  @include flexy-row;
+  border-top: 4px double #333;
+  #blue {
+    @include bg-image("../img/Blueprint.png");
+    display: inline-block;
+  }
 }
 
 .container {
